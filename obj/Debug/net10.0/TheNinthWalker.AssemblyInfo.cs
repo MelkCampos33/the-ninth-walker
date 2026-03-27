@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TheNinthWalker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec802ab4fafc00278d9ffa74f57c92887d57fd33")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+741e90f2d24e223c839a4d11ad85f17dbfc19927")]
 [assembly: System.Reflection.AssemblyProductAttribute("TheNinthWalker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TheNinthWalker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
