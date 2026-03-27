@@ -1,0 +1,6 @@
+@TheNinthWalker_HostAddress = http://localhost:5168
+
+GET {{TheNinthWalker_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
