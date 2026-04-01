@@ -16,35 +16,47 @@
 
 ```
 
-# The Ninth Walker
 
-**The Ninth Walker** é um RPG de aventura em texto desenvolvido em C#. Inspirado nas obras de J.R.R. Tolkien, o jogo coloca você no papel de um andarilho atravessando os biomas perigosos da Terra Média em busca de glória, poder e relíquias lendárias.
+#  The Ninth Walker - Alpha Version
 
-## ⚔️ Funcionalidades do Projeto
+**The Ninth Walker** é um RPG de aventura em texto desenvolvido em **C#** e **.NET**. O jogo foca em exploração de cenários, combate estratégico por turnos e progressão de personagem através de um sistema de itens e níveis.
 
-O sistema foi construído focando em modularidade e progressão clássica de RPG:
 
-* **Sistema de Biomas:** Explore três locais icônicos com desafios distintos:
+---
 
-    * 🌿 **Mirkwood (Floresta):** Enfrente Lobos e Goblins.
-    * 🕳️ **Moria (Cavernas):** Cuidado com Morcegos Gigantes e Aranhas de Gelo.
-    * 🏔️ **Misty Mountains (Montanhas):** Onde Golems de Pedra e Harpias dominam as alturas.
-     
-* **Combate por Turnos:** Sistema de batalha dinâmico que utiliza os atributos de Ataque, Defesa, Vida e Mana do Herói.
-* **Progressão de Nível:** Ganhe EXP ao derrotar inimigos. Ao subir de nível, seus atributos aumentam e sua Vida/Mana são restauradas.
-* **Sistema de Loot & Raridade:** * 5 armas base com requisitos de nível.
-* **Pity System:** A cada 20 itens coletados, as chances de encontrar um item **Lendário** aumentam drasticamente.
-* **Inventário Dinâmico:** Gerencie seu equipamento e equipe armas que aumentam seu dano total.
+##  Funcionalidades Atuais
 
-## 🚀 Tecnologias Utilizadas
+* **Sistema de Combate:** Escolha entre Ataque Rápido, Golpe Pesado ou Fúria para derrotar inimigos.
+* **Gestão de Inventário:** Sistema dinâmico que permite carregar poções e armas utilizando a classe `Items`.
+* **Equipamentos:** Armas que influenciam diretamente o `DanoTotal` do herói.
+* **Sistema de Loot:** Inimigos possuem chances de drop de itens consumíveis e **armas raras** (10% de chance).
+* **Progressão (Level Up):** Ganho de XP, aumento de atributos (Vida e Ataque) e expansão de energia para golpes especiais a cada nível alcançado.
+* **Exploração:** Três biomas iniciais com dificuldades progressivas:
+    1.  **Floresta Sombria** (Fácil)
+    2.  **Caverna de Gelo** (Médio)
+    3.  **Castelo Abandonado** (Difícil)
 
-* **Linguagem:** C#
-* **Plataforma:** .NET 8 / Console Application
-* **Arquitetura:** Orientação a Objetos (Classes, Herança, Factory Pattern)
+---
 
-## 🛠️ Como Executar
+##  Estrutura do Projeto
 
-1. Certifique-se de ter o [.NET SDK](https://dotnet.microsoft.com/download) instalado.
-2. Clone o repositório:
+O projeto segue uma arquitetura separada por responsabilidades para facilitar a manutenção e expansão:
+
+* **`Core/Models`**: Contém as classes base do jogo.
+    * `Heroi.cs`: Gerencia status, inventário e ações do jogador.
+    * `Inimigo.cs`: Define os monstros e a lógica de recompensas (Loot Table).
+    * `Items.cs`: Define as propriedades de armas e consumíveis (Nome, Poder, Raridade).
+* **`API/Program.cs`**: O orquestrador principal que gerencia os menus e o fluxo da aventura.
+
+---
+
+##  Como Jogar
+
+### Pré-requisitos
+* [.NET 8.0 SDK](https://dotnet.microsoft.com/download) ou superior instalado.
+
+### Execução
+1. Clone o repositório.
+2. Navegue até a pasta do projeto via terminal:
    ```bash
-   git clone [https://github.com/seu-usuario/the-ninth-walker.git](https://github.com/seu-usuario/the-ninth-walker.git)
+   cd src/api
